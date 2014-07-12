@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href=".\scripts\jquery-ui\jquery-ui.css" rel="stylesheet" />
+    <link href="./Styles/Style.css" rel="stylesheet" />
+    <script type="text/javascript" src=".\scripts\jquery.min.js"></script>
+    <script type="text/javascript" src=".\scripts\serv-src.js"></script>
+    <script type="text/javascript" src=".\scripts\jquery-ui\jquery-ui.js"></script>
+
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div>
+        <ul style="width:auto" id="menu">
+            <li><a href="QuestionsPage.html">Start Testing</a></li>
+	        <li><a href="AddQuestion.html">Add Question</a></li>
+	        <li><a href="Results.html">Results</a></li>
+        </ul>
+    </div>
+
+    <div class="ui-widget" id="addq" style="display: none">
+	    <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+		    <p><span class="ui-icon ui-icon-circle-check" style="float: left; margin-right: .3em;"></span>
+		                Your question was sucessfully added.</p>
+	    </div>
+    </div>
+
+    <form id="myFormId">
+        <p>
+            <label for="Content">Question:</label>
+            <input type="text" id="Content" />
+        </p>
+        <p>
+            <label for="OptionA">Option A: </label>
+            <input type="text" id="OptionA" />
+        </p>
+        <p >
+            <label for="OptionB">Option B: </label>
+            <input type="text" id="OptionB" "/>
+        </p>
+        <p>
+            <label for="OptionC">Option C: </label>
+            <input type="text" id="OptionC" />
+        </p>
+        <p>
+            <input type="submit" class="ui-button ui-corner-all" value="Register" onclick="formHandle(event)" />
+        </p>
+    </form>
+    <div id="par"></div>
+    <img src=".\image\ajax-loader.gif" id="ajaxloader" alt="Alternate Text" align="middle" style="display: none" />
+</body>
+</html>
