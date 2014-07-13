@@ -40,9 +40,15 @@ namespace QuestionsService
         {
             using (var session = NHibernateHelper.OpenSession())
             {
-                IEnumerable<Result> questions = session.QueryOver<Result>().OrderBy(el => el.Total).
-                    Desc.Take(amount).List<Result>(); 
-                return questions;
+                //{
+                //    IEnumerable<Result> questions = session.QueryOver<Result>().OrderBy(el => el.Total).
+                //        Desc.Take(amount).List<Result>(); 
+                //    return questions;
+                //}
+                //return NHibernateHelper.RetrieveEntities<Result>(session.QueryOver<Result>().OrderBy(el => el.Total).
+                //       Desc.Take(amount), x => x.List<Result>());
+                return NHibernateHelper.RetrieveEntities(el => el.List().OrderByDescending(x => x.Total).Take(amount).ToList());
+                    
             }
         }
 

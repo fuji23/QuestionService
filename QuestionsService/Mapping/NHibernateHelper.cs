@@ -47,5 +47,20 @@ namespace QuestionsService.Mapping
         {
             return SessionFactory.OpenSession();
         }
+
+        public static IEnumerable<Result> RetrieveEntities(
+            //IQueryOver<T> entities,
+            Func<IQueryOver<Result>, IEnumerable<Result>> func)
+        {
+            using (var session = NHibernateHelper.OpenSession())
+            {
+                return func(session.QueryOver<Result>());
+            }
+        }
+
+        internal static IEnumerable<Result> RetrieveEntities<T1>(Func<IQueryOver<Result>, IEnumerable<Result>> func)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
