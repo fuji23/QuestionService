@@ -28,28 +28,12 @@ namespace QuestionsService
 
         public IEnumerable<Question> GetQuestions(int amount)
         {
-            using (var session = NHibernateHelper.OpenSession())
-            {
-                IEnumerable<Question> questions = (from user in session.Linq<Question>() select user).
-                     ToList().OrderBy(q => Guid.NewGuid()).Take(amount);
-                return questions;
-            }
+            return NHibernateHelper.RetrieveEntities<Question>(el => el.OrderBy(q => Guid.NewGuid()).Take(amount));
         }
 
         public IEnumerable<Result> GetResults(int amount)
         {
-            using (var session = NHibernateHelper.OpenSession())
-            {
-                //{
-                //    IEnumerable<Result> questions = session.QueryOver<Result>().OrderBy(el => el.Total).
-                //        Desc.Take(amount).List<Result>(); 
-                //    return questions;
-                //}
-                //return NHibernateHelper.RetrieveEntities<Result>(session.QueryOver<Result>().OrderBy(el => el.Total).
-                //       Desc.Take(amount), x => x.List<Result>());
-                return NHibernateHelper.RetrieveEntities(el => el.List().OrderByDescending(x => x.Total).Take(amount).ToList());
-                    
-            }
+            return NHibernateHelper.RetrieveEntities<Result>(el => el.OrderByDescending(x => x.Total).Take(amount));
         }
 
         public Result GetResult(IEnumerable<Answer> answers, string name)
@@ -58,20 +42,18 @@ namespace QuestionsService
             var _result = (Result)null;
             if (answers.Count() >= 1)
             {
-                using (var session = NHibernateHelper.OpenSession())
-                {
-                    answers.ForEach(el =>
+                answers.ForEach(el =>
+                   {
+                       var _answer = NHibernateHelper.RetrieveEntities<Answer>(x => x).SingleOrDefault(e => e.QnId == el.QnId);
+                       if (_answer.Proper == el.Proper)  result++;
+                   });
+                _result = new Result
                     {
-                        var query = (from ans in session.Query<Answer>() where ans.QnId == el.QnId select ans);
-                        if (query.Any(x => x.Proper == el.Proper)) result++;
-                    });
-                    using (var transaction = session.BeginTransaction())
-                    {
-                        _result = new Result { Date = DateTime.Now.ToString("dd-MMM-yyyy HH:mm"), Total = result, Recipient = name };
-                        session.Save(_result);
-                        transaction.Commit();
-                    }
-                }
+                        Date = DateTime.Now.ToString("dd-MMM-yyyy HH:mm"),
+                        Total = result,
+                        Recipient = name
+                    };
+                NHibernateHelper.Save(_result);
             }
             return _result;
         }

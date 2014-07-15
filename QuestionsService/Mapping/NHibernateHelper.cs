@@ -10,6 +10,8 @@ using NHibernate.Tool.hbm2ddl;
 using System.Web.Configuration;
 using Oracle.DataAccess;
 using System.Configuration;
+using NHibernate.Context;
+
 
 namespace QuestionsService.Mapping
 {
@@ -39,7 +41,7 @@ namespace QuestionsService.Mapping
                           m.FluentMappings
                               .AddFromAssemblyOf<Question>())
                 .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
-                                                .Execute(false, true))
+                                                .Execute(false, true)).CurrentSessionContext<WebSessionContext>()
                 .BuildConfiguration().BuildSessionFactory();
         }
 
@@ -48,19 +50,25 @@ namespace QuestionsService.Mapping
             return SessionFactory.OpenSession();
         }
 
-        public static IEnumerable<Result> RetrieveEntities(
-            //IQueryOver<T> entities,
-            Func<IQueryOver<Result>, IEnumerable<Result>> func)
+        public static IEnumerable<T> RetrieveEntities<T>(Func<IEnumerable<T>, IEnumerable<T>> func) where T : class
         {
             using (var session = NHibernateHelper.OpenSession())
             {
-                return func(session.QueryOver<Result>());
+                return func(session.QueryOver<T>().List());
             }
         }
 
-        internal static IEnumerable<Result> RetrieveEntities<T1>(Func<IQueryOver<Result>, IEnumerable<Result>> func)
+        public static void Save<T>(T objtosave)
         {
-            throw new NotImplementedException();
+            using (var session = NHibernateHelper.OpenSession())
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    session.Save(objtosave);
+                    transaction.Commit();
+                }
+            }
         }
+
     }
 }
