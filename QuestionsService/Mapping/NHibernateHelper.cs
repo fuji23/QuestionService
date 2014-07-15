@@ -35,7 +35,7 @@ namespace QuestionsService.Mapping
             _sessionFactory = Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2008
                               .ConnectionString(
-                                 connstr => connstr.FromConnectionStringWithKey("Test"))
+                                 connstr => connstr.FromConnectionStringWithKey("DB-connect"))
                 )
                 .Mappings(m =>
                           m.FluentMappings

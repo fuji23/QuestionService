@@ -1,6 +1,0 @@
-﻿CREATE TABLE [dbo].[Questions]
-(
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
-    [Content] NVARCHAR(50) NULL,
-	Constraint PK_Id PRIMARY KEY CLUSTERED (Id)
-)
