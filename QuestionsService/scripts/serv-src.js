@@ -17,7 +17,6 @@ $(document).ready(function () {
     //Start Testing
     TestProcess = function (json) {
         $("#accordion").html("");
-        //$("#status").html("");
         $.each(json, function (k, v) {
             var _arr = [];
             var id = JSON.stringify(v.QuestionId);
@@ -25,7 +24,7 @@ $(document).ready(function () {
             var A = JSON.stringify(v.OptionA);
             var B = JSON.stringify(v.OptionB);
             var C = JSON.stringify(v.OptionC);
-            //Shuffle auestions
+            //Shuffle questions
             _arr.push(A, B, C);
             var _final = _arr.slice();
             for (var i = 0; i < _final.length; i++) {
@@ -33,12 +32,12 @@ $(document).ready(function () {
                 _final[i] = _arr[x];
                 _arr.splice(x, 1);
             }
+
             $("#accordion").append("<h3>Question " + (k + 1) + "</h3> " +
-            "<div> <p>" + quest + "</p>" +
-             "<p>" + "<input type='radio' name='var" + k + "' id=" + id + " " + "value=" + _final[0] + ">" + _final[0] + "<br> " + "</p>" +
-             "<p>" + "<input type='radio' name='var" + k + "' id=" + id + " " + "value=" + _final[1] + ">" + _final[1] + "<br> " + "</p>" +
-             "<p>" + "<input type='radio' name='var" + k + "' id=" + id + " " + "value=" + _final[2] + ">" + _final[2] + "<br> " + "</p>" +
-             "</div>");
+            "<div> <p id='qc" + id + "'>" + quest + "</p></div>");
+            $.each(_final, function (ind, val) {
+                $("#qc" + id).append("<p><input type='radio' name='var" + k + "' id=" + id + " " + "value=" + _final[ind] + ">" + _final[ind] + "<br></p>");
+            });
         });
 
         $(document).ready(function () {

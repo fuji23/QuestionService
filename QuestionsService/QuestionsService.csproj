@@ -81,11 +81,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddQuestion.html" />
     <Content Include="App_Data\QSDB.mdf" />
     <Content Include="App_Data\QSDB_log.ldf" />
-    <Content Include="QuestionsPage.html" />
-    <Content Include="Results.html" />
+    <Content Include="Pages\AddQuestion.html" />
+    <Content Include="Pages\QuestionsPage.html" />
+    <Content Include="Pages\Results.html" />
     <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\serv-src.js" />
     <Content Include="Service.svc" />
