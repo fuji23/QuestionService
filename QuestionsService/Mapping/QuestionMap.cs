@@ -11,7 +11,7 @@ namespace QuestionsService.Mapping
     {
         public QuestionMap()
         {
-            Id(x => x.QuestionId).GeneratedBy.Native();
+            Id(x => x.Id).GeneratedBy.Native();
             Map(x => x.OptionA).Column("A");
             Map(x => x.OptionB).Column("B");
             Map(x => x.OptionC).Column("C");

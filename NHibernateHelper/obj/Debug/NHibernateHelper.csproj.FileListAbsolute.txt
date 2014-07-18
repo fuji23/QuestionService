@@ -1,0 +1,17 @@
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\NHibernateHelper.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\NHibernateHelper.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\Castle.Core.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\FluentNHibernate.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\Iesi.Collections.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\NHibernate.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\Castle.Core.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\FluentNHibernate.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\Iesi.Collections.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\NHibernate.xml
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\obj\Debug\NHibernateHelper.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\obj\Debug\NHibernateHelper.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\System.Configuration.Abstractions.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\System.Configuration.Abstractions.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\bin\Debug\NHibernateHelper.XML
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\NHibernateHelper\obj\Debug\NHibernateHelper.csprojResolveAssemblyReference.cache

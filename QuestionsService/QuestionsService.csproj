@@ -59,6 +59,9 @@
     <Reference Include="NHibernate.Linq">
       <HintPath>..\packages\NHibernate.Linq.1.0\lib\NHibernate.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernateHelper">
+      <HintPath>..\NHibernateHelper\bin\Debug\NHibernateHelper.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess">
       <HintPath>..\packages\Oracle.DataAccess.x86.2.112.1.0\lib\Oracle.DataAccess.dll</HintPath>
     </Reference>
@@ -96,13 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Answer.cs" />
-    <Compile Include="Entities\IAnswer.cs" />
-    <Compile Include="Entities\IResult.cs" />
     <Compile Include="Entities\Question.cs" />
     <Compile Include="Entities\Results.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="Mapping\AnswerMap.cs" />
-    <Compile Include="Mapping\NHibernateHelper.cs" />
     <Compile Include="Mapping\QuestionMap.cs" />
     <Compile Include="Mapping\ResultsMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

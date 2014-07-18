@@ -16,3 +16,6 @@ C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\QuestionsS
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\QuestionsService\bin\Castle.Core.xml
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\QuestionsService\bin\NHibernate.ByteCode.Castle.pdb
 C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\QuestionsService\obj\Debug\QuestionsService.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\QuestionsService\bin\NHibernateHelper.dll
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\QuestionsService\bin\NHibernateHelper.pdb
+C:\Users\Admin\Documents\Visual Studio 2012\Projects\QuestionsService\QuestionsService\bin\NHibernateHelper.xml

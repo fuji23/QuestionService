@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Runtime.Serialization;
+using NHibernateHelper;
 
 namespace QuestionsService.Entities
 {
     [DataContract]
-    public class Result : IResult
+    public class Result : IEntity
     {
+        public Result()
+        {
+        }
+
+        public Result(string _recipient, int _total, string _date)
+        {
+            Recipient = _recipient;
+            Total = _total;
+            Date = _date;
+        }
+
         [DataMember]
         public virtual int Id { get; protected set; }
         [DataMember]

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NHibernateHelper</name>
+    </assembly>
+    <members>
+        <member name="T:NHibernateHelper.NHibernateHelper">
+            <summary>
+            You must implement IEtity interface in all your entity classes 
+            for compatibility with NHibernateHelper data provider
+            </summary>
+        </member>
+    </members>
+</doc>

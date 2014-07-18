@@ -19,7 +19,7 @@ $(document).ready(function () {
         $("#accordion").html("");
         $.each(json, function (k, v) {
             var _arr = [];
-            var id = JSON.stringify(v.QuestionId);
+            var id = JSON.stringify(v.Id);
             var quest = JSON.stringify(v.Content);
             var A = JSON.stringify(v.OptionA);
             var B = JSON.stringify(v.OptionB);
@@ -55,7 +55,7 @@ $(document).ready(function () {
         $(function () {
             $('input:checked').each(function () {
                 jsn.push({
-                    QnId: $(this).attr('id'),
+                    Id: $(this).attr('id'),
                     Proper: $(this).attr('value')
                 });
             });
@@ -89,11 +89,10 @@ $(document).ready(function () {
             {
                 text: "OK",
                 click: function () {
-                    window.location.replace(window.location.origin + "/Results.html");
+                    window.location.replace(window.location.origin + "/Pages/Results.html");
                 }
             }
             ]
-            //close: window.location.replace(window.location.origin + "/Results.html")
         });
     };
 

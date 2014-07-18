@@ -12,7 +12,7 @@ namespace QuestionsService.Mapping
     {
         public AnswerMap()
         {
-            Id(x => x.QnId).GeneratedBy.Native().Column("QnId");
+            Id(x => x.Id).GeneratedBy.Native().Column("Id");
             Map(x => x.Proper);
             Table("Answers");
         }

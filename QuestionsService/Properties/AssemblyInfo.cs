@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("QuestionsService")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("*KDFX-SOFT*")]
+[assembly: AssemblyCompany("FujiF")]
 [assembly: AssemblyProduct("QuestionsService")]
-[assembly: AssemblyCopyright("Copyright © *KDFX-SOFT* 2014")]
+[assembly: AssemblyCopyright("FujiF")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
